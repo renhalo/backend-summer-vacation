@@ -8,16 +8,15 @@ import(
 
 	// import sample API packages
 	"github.com/miraikeitai2020/backend-summer-vacation/pkg/server/model"
-<<<<<<< HEAD
 	"github.com/miraikeitai2020/backend-summer-vacation/pkg/stamp"
 	"github.com/miraikeitai2020/backend-summer-vacation/pkg/zeller"
 
-=======
->>>>>>> upstream/master
 )
 
 var(
 	user model.User
+	check model.ZellerElements
+	
 )
 
 type Controller struct {
