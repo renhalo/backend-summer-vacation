@@ -1,9 +1,5 @@
 package zeller
-import (
-	"time"
 
-	"github.com/miraikeitai2020/backend-summer-vacation/pkg/server/model"
-)
 
 func Zeller(year,month,day int) (week string) {
 	year,month=check(year,month)
