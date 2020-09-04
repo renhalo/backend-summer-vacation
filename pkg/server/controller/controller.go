@@ -51,6 +51,7 @@ func (ctrl *Controller)SayHello(context *gin.Context) {
 //   }
 // }
 func (ctrl *Controller)Task1(context *gin.Context) {
+	context.JSON(200, stamp.Now())
 }
 
 // 課題2
