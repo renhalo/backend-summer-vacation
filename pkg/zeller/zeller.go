@@ -32,6 +32,7 @@ func check(year,month int)(int,int){
 }
 
 func  Zellertask(year,month,day int)int  {
-	zellers:=year+year/100+year/400+(13*month+8)/5+day
-	return(zellres%7)
+	zellers := year+year/100+year/400+(13*month+8)/5+day
+	
+	return zellers%7
 }
