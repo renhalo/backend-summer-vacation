@@ -15,7 +15,7 @@ import(
 
 var(
 	user model.User
-	check model.ZellerElements
+	calc model.ZellerElements
 	
 )
 
@@ -70,14 +70,14 @@ func (ctrl *Controller)Task1(context *gin.Context) {
 //   "week": string //例： Monday
 // }
 func (ctrl *Controller) Task2(context *gin.Context) {
-	err := context.BindJSON(&check)
+	err := context.BindJSON(&calc)
 	if err != nil {
 		log.Println("[ERROR] Faild Bind JSON")
 		context.JSON(500, gin.H{"message": "Internal Server Error"})
 		return
 	}
 	context.JSON(200, gin.H{
-		"week": zeller.Zeller(check.Year, check.Month, check.Day),
+		"week": zeller.Zeller(calc.Year, calc.Month, calc.Day),
 	})
 }
 
